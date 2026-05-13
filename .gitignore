@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.turbo/
+*.famcache
+.env
+.env.local
+*.log
+coverage/
+.next/
+out/
+.docusaurus/
+build/

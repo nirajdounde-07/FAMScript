@@ -1,0 +1,13 @@
+{
+  "name": "@famscript/docs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "docusaurus start",
+    "build": "docusaurus build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

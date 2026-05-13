@@ -1,0 +1,21 @@
+%% FamScript example – basic family tree
+GROOM_SLF_001["Arjun Kumar | 28 | M | G0"]
+BRIDE_SLF_001["Priya Sharma | 26 | F | G0"]
+
+F_SLF_001["Ramesh Kumar | 55 | M | G+1"]
+M_SLF_001["Sunita Kumar | 52 | F | G+1"]
+
+GF_PAT_001["Shyam Lal | 80 | M | G+2"]
+GM_PAT_001["Kamla Devi | 77 | F | G+2"]
+
+GGF_PAT_001["Ram Das | 104 | M | G+3 | deceased"]
+
+UNK_MAT_001["Unknown | ? | ? | G+2"]
+
+F_SLF_001 -->|"Father of"| GROOM_SLF_001
+M_SLF_001 -->|"Mother of"| GROOM_SLF_001
+F_SLF_001 ---|"Married to"| M_SLF_001
+GROOM_SLF_001 ==>|"Married to"| BRIDE_SLF_001
+GF_PAT_001 -->|"Father of"| F_SLF_001
+GM_PAT_001 -->|"Mother of"| F_SLF_001
+GGF_PAT_001 -->|"Father of"| GF_PAT_001

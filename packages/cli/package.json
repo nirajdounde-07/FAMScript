@@ -1,0 +1,38 @@
+{
+  "name": "@famscript/cli",
+  "version": "0.0.1",
+  "description": "FamScript CLI – render, validate, export, dev, lint",
+  "type": "module",
+  "bin": {
+    "famscript": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --dts",
+    "dev": "tsup src/cli.ts --format esm --watch",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@famscript/core": "workspace:*",
+    "@famscript/validator": "workspace:*",
+    "@famscript/export": "workspace:*",
+    "commander": "^13.1.0",
+    "chalk": "^5.4.1",
+    "ora": "^8.2.0",
+    "chokidar": "^4.0.3"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "vitest": "^3.0.4",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  }
+}

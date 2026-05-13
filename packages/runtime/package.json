@@ -1,0 +1,33 @@
+{
+  "name": "@famscript/runtime",
+  "version": "0.0.1",
+  "description": "FamScript runtime – live updates, zoom/pan, search, highlighting",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@famscript/core": "workspace:*","zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "vitest": "^3.0.4",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  }
+}
