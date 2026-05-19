@@ -12,7 +12,7 @@ const DEFAULTS: Required<RenderConfig> = {
   labelFormat: 'full',
 }
 
-// ─── helpers ─────────────────────────────────────────────────────────────────
+// ─── helpers ─────────────────────────────────────────────────────────────────vfdsavavvvvvv
 
 /**
  * Escape characters that would break Mermaid label syntax inside ["..."].
